@@ -1,5 +1,9 @@
 rm(list = ls())
-setwd("C:/Users/Skyler/OneDrive - University of Iowa/FIN9391 Thesis in Equity Portfolio Optimization/RESULTS_with transaction costs") #setwd("Path/To/Your/Working/Directory")
+
+#Clone GitHub repository branch as working directory and save to a local path
+git clone -b RESULTS_with-transaction-costs --single-branch https://github.com/SkylerSchneekloth/Thesis-in-Portfolio-Optimization.git
+setwd("/path/to/Thesis-in-Portfolio-Optimization")
+
 benchmarkData <- read.csv("benchmarkData.csv",header=TRUE, row.names=1)
 dfRAND <- read.csv("randomized_withTransactionCosts.csv",header=TRUE, row.names=1)
 dfMVOa <- read.csv("transCost_MVO_unconstrained.csv",header=TRUE, row.names=1)
