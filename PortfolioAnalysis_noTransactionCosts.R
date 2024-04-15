@@ -1,7 +1,7 @@
 rm(list = ls())
 
 #Clone GitHub repository branch as working directory and save to a local path
-git clone -b RESULTS_with-transaction-costs --single-branch https://github.com/SkylerSchneekloth/Thesis-in-Portfolio-Optimization.git
+git clone -b RESULTS_no-transaction-costs --single-branch https://github.com/SkylerSchneekloth/Thesis-in-Portfolio-Optimization.git
 setwd("/path/to/Thesis-in-Portfolio-Optimization")
 
 
