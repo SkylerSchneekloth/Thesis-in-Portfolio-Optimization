@@ -367,7 +367,7 @@ for (i in 1:(nrow(returns)-roller)){
 }
 
 
-# Calculate asset return from monthly rebalancing as sum of change in asset weights MoM
+# Calculate portfolio turnover from monthly rebalancing as sum of change in asset weights MoM
 df_changes = lapply(df_weights, function(x) c(NA, diff(x)))
 df_changes = as.data.frame(df_changes)
 df["turnover"] <- rowSums(abs(df_changes), na.rm = TRUE)/2
