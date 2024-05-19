@@ -1,5 +1,5 @@
-WARNING!
-A significant shortcoming of my thesis submission is the realistic modeling of portfolio turnover and transaction costs. Referencing lines 363-366 of PortfolioBacktester.R you can see that portfolio turnover is approximated rather than exact. That's because df_weights contains the "optimal" weighting scheme as a result of monthly rebalancing, as opposed to the actual MoM change in a portfolio’s composition due to fluctuations in asset prices. For example, if you ran an equally weighted portfolio though PortfolioBacktester.R transaction costs would equal zero (which is obviously incorrect). Future research will address this issue.
+Step 1: PortfolioBacktester.R
 
-UPDATE! 5/16/2024
-PortfolioBacktester_v2.R resolves the approximation issue described above by accounting for fluctuations in asset prices. Preliminary results from exact turnover calculations are consistent with the approximation that forms table 1, except for in the case of our Ledoit-Wolf portfolio (which has a much higher average monthly turnover rate than previously estimated close to 30%). This makes sense becauase now it's more in line with the Bodnar-style shrinkage portfolios. Therefore all shrinakge portfolios--not just the Bodnar ones--might benefit from a monthly turnover constraint. Charts/tables, .xlxs files, and the article itself have NOT been updated.
+Step 2: BenchmarkAnalysis.R
+
+Step 3: PortfolioAnalysis_noTransactionCosts.R, PortfolioAnalysis_withTransactionCosts.R, EfficientFrontierModeling.R, clusterAnalysis.R
